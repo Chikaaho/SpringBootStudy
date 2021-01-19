@@ -14,11 +14,12 @@
     <div class="row row-4">
         <h1 class="h1">这是首页</h1>
         <div th:each="msg:${msgs}" th:text="${msg}"></div>
+        <input type="button" class="button" id="test">
     </div>
 </div>
 <script>
     $(function () {
-        $.ajax({
+        /*$.ajax({
             url: 'http://localhost:8080/test',
             type: 'get',
             dataType: 'json',
@@ -30,6 +31,9 @@
             error: function (res) {
 
             }
+        })*/
+        $('#test').click(function () {
+            console.log('ok')
         })
     })
 </script>

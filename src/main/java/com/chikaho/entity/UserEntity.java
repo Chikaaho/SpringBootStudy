@@ -1,6 +1,5 @@
 package com.chikaho.entity;
 
-import lombok.AllArgsConstructor;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;

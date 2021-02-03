@@ -1,13 +1,8 @@
 package com.chikaho.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.sql.Timestamp;
 import java.util.Objects;
 
-@Table(name = "carts", schema = "demo", catalog = "")
 public class CartsEntity {
     private long id;
     private long orderName;
@@ -30,8 +25,7 @@ public class CartsEntity {
     public CartsEntity() {
     }
 
-    @Id
-    @Column(name = "id")
+
     public long getId() {
         return id;
     }
@@ -40,8 +34,6 @@ public class CartsEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "order_name")
     public long getOrderName() {
         return orderName;
     }
@@ -50,8 +42,6 @@ public class CartsEntity {
         this.orderName = orderName;
     }
 
-    @Basic
-    @Column(name = "stock")
     public long getStock() {
         return stock;
     }
@@ -60,8 +50,6 @@ public class CartsEntity {
         this.stock = stock;
     }
 
-    @Basic
-    @Column(name = "price")
     public int getPrice() {
         return price;
     }
@@ -70,8 +58,6 @@ public class CartsEntity {
         this.price = price;
     }
 
-    @Basic
-    @Column(name = "is_deleted")
     public Byte getIsDeleted() {
         return isDeleted;
     }
@@ -80,8 +66,6 @@ public class CartsEntity {
         this.isDeleted = isDeleted;
     }
 
-    @Basic
-    @Column(name = "create_time")
     public Timestamp getCreateTime() {
         return createTime;
     }
@@ -90,8 +74,6 @@ public class CartsEntity {
         this.createTime = createTime;
     }
 
-    @Basic
-    @Column(name = "update_time")
     public Timestamp getUpdateTime() {
         return updateTime;
     }

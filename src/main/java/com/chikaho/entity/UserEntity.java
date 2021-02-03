@@ -1,14 +1,9 @@
 package com.chikaho.entity;
 
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.sql.Timestamp;
 import java.util.Objects;
 
-@Table(name = "user", schema = "demo", catalog = "")
 public class UserEntity {
 
     private long id;
@@ -32,8 +27,6 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    @Id
-    @Column(name = "id")
     public long getId() {
         return id;
     }
@@ -42,8 +35,6 @@ public class UserEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "username")
     public String getUsername() {
         return username;
     }
@@ -52,8 +43,6 @@ public class UserEntity {
         this.username = username;
     }
 
-    @Basic
-    @Column(name = "password")
     public String getPassword() {
         return password;
     }
@@ -62,8 +51,6 @@ public class UserEntity {
         this.password = password;
     }
 
-    @Basic
-    @Column(name = "sex")
     public Integer getSex() {
         return sex;
     }
@@ -72,8 +59,6 @@ public class UserEntity {
         this.sex = sex;
     }
 
-    @Basic
-    @Column(name = "is_deleted")
     public Byte getIsDeleted() {
         return isDeleted;
     }
@@ -82,8 +67,6 @@ public class UserEntity {
         this.isDeleted = isDeleted;
     }
 
-    @Basic
-    @Column(name = "create_time")
     public Timestamp getCreateTime() {
         return createTime;
     }
@@ -92,8 +75,6 @@ public class UserEntity {
         this.createTime = createTime;
     }
 
-    @Basic
-    @Column(name = "update_time")
     public Timestamp getUpdateTime() {
         return updateTime;
     }

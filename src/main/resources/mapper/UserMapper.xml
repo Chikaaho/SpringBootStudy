@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chikaho.mapper.UserMapper">
+
+    <select id="allUsers" resultType="UserEntity">
+        select * from
+        demo.user;
+    </select>
+
+    <select id="queryUser" resultType="UserEntity">
+        select * from
+        demo.user
+        where
+        (username = #{obj}
+        or
+        sex = #{obj}
+        or
+        create_time = #{obj}
+        or
+        update_time = #{obj});
+    </select>
+
+    <update id="updateUser" parameterType="Object">
+        update
+        demo.user
+        set
+        (username = #{user.getUsername()}
+        ,password = #{user.getPassword()}
+        ,sex = #{user.getSex()}
+        ,is_deleted = #{user.getIsdeleted()}
+        ,update_time = #{user.getUpdatetime()})
+        where
+        id = #{id}
+    </update>
+
+</mapper>

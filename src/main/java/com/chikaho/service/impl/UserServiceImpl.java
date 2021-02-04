@@ -34,4 +34,9 @@ public class UserServiceImpl implements UserService {
     public boolean deleteUser(long id) {
         return userMapper.deleteUser(id);
     }
+
+    @Override
+    public boolean addUser(UserEntity user) {
+        return userMapper.addUser(user);
+    }
 }

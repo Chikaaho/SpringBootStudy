@@ -20,4 +20,8 @@ public interface UserMapper {
     // 删除用户
     boolean deleteUser(@Param("id") long id);
 
+    // 添加用户
+    boolean addUser(@Param("user") UserEntity user);
+
+
 }

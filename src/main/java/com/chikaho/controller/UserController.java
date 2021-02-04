@@ -17,7 +17,7 @@ public class UserController {
     @Resource
     private UserServiceImpl userService;
 
-    private static String ERROR_MESSAGE;
+    private static String ERROR_MESSAGE = "";
 
     // 查询所有用户的信息
     @RequestMapping("/allUser.html")
